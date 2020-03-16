@@ -1,0 +1,495 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:content-box;
+}
+
+body{
+    
+    font-family: Arial, Helvetica, sans-serif;
+    background-color:rgb(65, 62, 62);
+    color:rgb(174, 169, 169);
+ 
+}
+
+nav{
+    background-color:rgb(64,64,155);
+    max-width:1200px;
+    margin:auto;
+    height:50px;
+    display:flex;
+    justify-content: center;
+    color:white;
+}
+ 
+ul {
+    height:100%;
+    width:75%;
+    list-style-type: none;
+    overflow: hidden;
+    display:flex;
+    justify-content:space-between;
+    background-color:rgb(64,64,155)
+  }
+
+li a {
+    font-weight:bold;
+    height:100%;
+    display: block;
+    color:white !important;
+    text-align: center;
+    padding: 15px 25px;
+    text-decoration: none;
+  }
+
+a:hover{
+    animation: 0.2s 1 fade;
+    background-color:rgb(152, 152, 208);
+}
+
+header{
+    background-color:rgb(19, 17, 17);
+    text-align: center;
+    max-width: 1200px;
+    margin:auto;
+    background-color:black;
+    
+}
+
+#burgerContainer{
+    width:160px;
+    display: none;
+}
+
+#burger{
+    width:80px;
+    padding:5px;
+    border-radius:50%;
+    background-color:white;
+    z-index: 2;
+    margin:auto;
+    filter:invert(100%);
+}
+
+.frame{
+    position:relative;
+    height:100vh;
+    width:100%;
+
+}
+
+.frame h1{
+    position:absolute;
+    left:50%;
+    top:50%;
+    width:50%;
+    height:3rem;
+    margin-left:-25%;
+   margin-top:-1.5rem;
+   color:white;
+   background-color:black;
+   opacity: 0.5;
+   font-weight:bold;
+   font-size:3rem;
+    z-index:1;
+}
+iframe{
+    position:absolute;
+    left:50%;
+    width:100%;
+    height:60vh;
+    margin-left:-50%;
+    top:50%;
+    margin-top:-30vh;
+}
+
+main{
+    display:flex;
+    max-width: 1200px;
+    margin:auto;
+}
+
+#articles{
+    display:flex;
+    width:80%;
+    flex-wrap:wrap;
+    justify-content:space-between;
+}
+
+.article{
+    width:33%;
+    height:auto;
+    flex-grow:1;
+    text-align:center;
+
+}
+
+.relativeFrame{
+    position:relative;
+    width:100%;
+    height:40vh;
+    overflow:hidden;
+    background-color:black;
+  
+}
+
+.relativeFrame2{
+    position:relative;
+    width:100%;
+    height:30vh;
+    overflow:hidden;
+    background-color:black;
+  
+}
+
+.generalPic{
+    width:100%;
+    height:40vh;
+    position:absolute;
+    top:0;
+    left:0;
+}
+
+.aPic{
+    width:100%;
+    height:30vh;
+    position:absolute;
+    top:0;
+    left:0;
+}
+
+.bannerFrame{
+    position:absolute;
+    transform:rotate(-45deg);
+    background-color:rgb(64,64,155);
+    color:white;
+    z-index:0;
+    top:0px;
+    left:-60px;
+    padding-right:6rem;
+    width:11rem;
+}
+ 
+
+.article h2{
+    background-color:black;
+    opacity:0.9;
+    color:white;
+  
+}
+
+.article p{
+    text-align:left;
+    margin-left:2px;
+    margin-top:20px;
+    margin-bottom:20px;
+    font-weight:200;
+    line-height:1.8em;
+}
+
+aside{
+    border: solid 10px rgb(64, 64, 155);
+    height:max-content;
+    position:sticky;
+    top:0;
+    width:20%;
+    display:flex;
+    flex-direction: column;;
+}
+
+aside h2{
+    text-align:center;
+    background-color:black;
+    opacity:0.9;
+    color:white;
+    border-bottom:solid 10px rgb(64,64,155);
+
+}
+
+aside h3{
+    position:absolute;
+    left:50%;
+    top:50%;
+    width:100%;
+    margin-left:-50%;
+    padding: 3px 0;
+    margin-top:-1.5vh;
+   background-color:black;
+   opacity: 0.5;
+   font-weight:bold;
+   text-align:center;
+   font-size:1em;
+    z-index:1;
+
+}
+
+footer{
+    text-align:center;
+    color:black;
+    font:2rem;
+    margin-top:2rem;
+}
+/****************************************/
+
+
+@media (max-width:1100px){ /*SMALL SCREEN*/
+
+    .article{
+        width:50%;
+    }
+
+    .bannerFrame{
+        left:-14%;
+    }
+
+
+}
+
+@media (min-width:825px){
+
+    #options{
+        display:flex !important;
+    }
+
+    .generalPic{
+        max-height:300px;
+    }
+
+    .relativeFrame{
+        max-height:300px;
+    }
+}
+
+@media (max-width:824px){ /*TABLET*/
+
+  
+    aside{
+        border:none;
+    }
+
+    .generalPic{
+        height:100%;
+        
+    }
+
+    .frame h1{
+
+       font-size:2rem;
+       height:2rem;
+    }
+
+    #burgerContainer{
+        display:block !important;
+
+    }
+
+    nav{
+        position:fixed;
+        top:0;
+        left:0;
+        height:auto;
+        z-index:999;
+        background-color:transparent;
+        display:block; 
+        opacity:0.6;
+        
+    }
+
+    .bannerFrame{
+        transform:rotate(45deg);
+        top:5%;
+        left:72%;
+        padding-left:1%;
+        padding-right:1%;
+    }
+
+    ul{
+        width: 160px;
+        display:none;
+        flex-direction:column;
+    }
+
+    li a{
+        text-align: left;
+    }
+
+    main{
+        flex-direction:column;
+    }
+
+    #articles{
+        width:100%;
+    }
+
+    .article{
+        flex-direction:row;
+        width:100%;
+        align-items: stretch;
+        min-height:292px;
+        max-height:1200px;
+        overflow:
+    }
+
+    .article h2{
+       
+        width:40%;
+    }
+    .article p{
+        
+        width:40%;
+    }
+    .relativeFrame{
+        width:60%;
+        float: right;
+        height:100%;
+    
+    }
+
+    aside{
+        width:100%;
+    }
+
+    .relativeFrame2{
+        height:120vh;
+    }
+
+    .aPic{
+        height:120vh;
+    }
+
+    aside h3{
+        font-size:2rem;
+    }
+}
+
+@media (max-width:550px){   /*PHONES*/
+
+    .frame h1{
+
+        font-size:1rem;
+        height:1rem;
+     }
+
+     .article{
+        flex-direction:column;
+        width:100%;
+        height:auto;
+    }
+    .article h2{
+        position:relative;
+        top:-28px;
+        width:100%;
+        opacity:0.6;
+    }
+
+    .article p{
+        width:100%;
+        margin-top:2px;
+    }
+    .relativeFrame{
+      
+        width:100%;
+        float: none;
+        height:250px;
+    
+    }
+
+    .relativeFrame2{
+        height:70vh;
+    }
+
+    .aPic{
+        height:70vh;
+    }
+
+    .bannerFrame{
+        left:420px;
+
+    }
+
+
+}
+
+@media (max-width:492px){
+    .bannerFrame{
+        left:370px;
+
+    }
+}
+@media (max-width:450px){
+        .bannerFrame{
+            left:300px;
+    
+        }
+
+}
+
+@media (max-width:375px){
+    .bannerFrame{
+        left:250px;
+
+    }
+
+}
+
+
+
+@media (max-width:320px){
+    .bannerFrame{
+        left:200px;
+
+    }
+
+}
+
+/*************************************************/
+
+@keyframes fade {
+    from {
+        background-color:rgb(64,64,155);
+    }
+  
+    to {
+        background-color:rgb(152, 152, 208);
+    }
+  }
+
+  @keyframes burgerFade {
+    from {
+        background-color:white;
+    }
+  
+    to {
+        background-color:rgb(191, 191, 100);
+    }
+  }
+
+  @keyframes burgerFadeOut {
+    from {
+        background-color:rgb(152, 152, 208);
+    }
+  
+    to {
+        background-color:white;
+    }
+  }
+
+  @keyframes pop {
+    from {
+        opacity:0;
+    }
+  
+    to {
+        opacity:1;
+    }
+  }
+
+  @keyframes popout {
+    from {
+        opacity:1;
+    }
+  
+    to {
+        opacity:0;
+    }
+}
